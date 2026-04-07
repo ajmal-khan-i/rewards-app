@@ -34,12 +34,6 @@
 
 # Mockito
 
-
-
-
-
-
-
 # 📊 Business Logic
 
 # Reward points are calculated as:
@@ -55,19 +49,11 @@
 # If ≤ $50 → 0 points
 
 
-
-
-
-
-
-
-
 # 📅 API Design
 
 # 🔹 Get Rewards by Customer and Date Range
 
 # GET /api/rewards/{customerId}?startDate=YYYY-MM-DD\&endDate=YYYY-MM-DD
-
 
 
 # Example 1:
@@ -199,15 +185,11 @@
 # Start date must be ≤ End date
 
 
-
 # ✔ Data Rules
 
 # Customer must exist
 
 # Transactions must exist in given range
-
-
-
 
 
 # 🧠 Edge Cases Handled
@@ -221,9 +203,6 @@
 # Empty transaction list in range
 
 # Multi-year date range support
-
-
-
 
 
 # 🧪 Testing
@@ -249,9 +228,6 @@
 # mvn test
 
 
-
-
-
 # 📂 Project Structure
 
 # com.app.rewards
@@ -273,54 +249,31 @@
 # └── config
 
 
-
-
-
 # 🚀 How to Run
 
 # 1\. Clone repo
 
 # git clone https://github.com/your-username/rewards-app.git
 
-
-
 # 2\. Build project
 
 # mvn clean install
-
-
 
 # 3\. Run application
 
 # mvn spring-boot:run
 
 
-
 👨‍💻 Author
-
-
-
 Ajmal Khan
-
 Java Spring Boot Developer
 
 
-
 🏁 Summary
-
-
-
 This project demonstrates:
-
-
-
 Clean layered architecture
-
 Real-world business logic implementation
-
 REST API design best practices
-
 Unit testing with Mockito
 
 Proper error handling strategy
-

@@ -1,7 +1,6 @@
 package com.app.rewards.service;
 
 import com.app.rewards.dto.RewardResponse;
-import com.app.rewards.dto.TransactionDTO;
 import com.app.rewards.dto.YearlyReward;
 import com.app.rewards.exception.ResourceNotFoundException;
 import com.app.rewards.model.Customer;
@@ -10,12 +9,10 @@ import com.app.rewards.repository.CustomerRepo;
 import com.app.rewards.repository.TransactionRepo;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.util.*;
-import java.util.concurrent.CompletableFuture;
 import java.util.stream.Collectors;
 
 @Service
@@ -25,12 +22,6 @@ public class RewardService {
 
     private final TransactionRepo transactionRepository;
     private final CustomerRepo customerRepository;
-
-    @Async
-    public CompletableFuture<List<Transaction>> getTransactionsAsync(Long customerId) {
-        return CompletableFuture.completedFuture(
-                transactionRepository.findByCustomerId(customerId));
-    }
 
     public RewardResponse calculateRewards(Long customerId,
                                            LocalDate startDate,
